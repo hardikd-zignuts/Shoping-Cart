@@ -1,0 +1,18 @@
+nav {
+  background-color: $nav-bg;
+  .nav-title {
+    font-weight: 600;
+  }
+  .nav-btn {
+    border-color: $nav-btn;
+    color: $nav-btn;
+    padding: 5px 26px;
+
+    span {
+      background-color: $nav-btn !important;
+      color: black;
+      margin: 0px 7px;
+      padding: 4px 7px;
+    }
+  }
+}
