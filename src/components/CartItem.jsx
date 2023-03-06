@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-// import { addToCart, removeFromCart } from "../Redux/cartAction";
+import { addToCart, removeFromCart } from "../Redux/cartAction";
 import {
   Card,
   CardBody,
@@ -17,38 +17,42 @@ const CartItem = ({
   itemBasePrice,
   itemTitle,
 }) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   return (
     <>
-      <Card className="m-2">
-        <CardBody>
+      <Card className="my-2 border-0">
+        <CardBody id="cardBody">
           <div className="d-flex align-items-center justify-content-between">
-            <CardTitle tag="h5">{itemTitle}</CardTitle>
+            <CardTitle tag="h3">{itemTitle}</CardTitle>
             <div className="d-flex align-items-center justify-content-between">
-              <CardText>${itemPrice * itemQuantity}.00</CardText>
-              <CardSubtitle className="mb-2 text-muted" tag="h6">
+              <CardText className="fs-4 fw-bold pe-2">
+                ${itemPrice * itemQuantity}.00
+              </CardText>
+              <CardSubtitle className="mb-2 text-light fst-italic" tag="h6">
                 (${itemBasePrice}.00/item)
               </CardSubtitle>
             </div>
           </div>
 
           <div className="d-flex mt-4 align-items-center justify-content-between">
-            <CardText>×{itemQuantity}</CardText>
+            <CardText className="fw-bold">×{itemQuantity}</CardText>
             <div>
               <Button
-                // onClick={() => dispatch(addToCart({ id }))}
-                color="success"
+                onClick={() => dispatch(removeFromCart({ id }))}
+                color="light"
                 className="mx-3"
-              >
-                +
-              </Button>
-              <Button
-                // onClick={() => dispatch(removeFromCart({ id }))}
-                color="danger"
-                className="mx-3"
+                outline={true}
               >
                 -
+              </Button>
+              <Button
+                onClick={() => dispatch(addToCart({ id }))}
+                color="light"
+                className="mx-3"
+                outline={true}
+              >
+                +
               </Button>
             </div>
           </div>

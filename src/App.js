@@ -11,14 +11,13 @@ function App() {
       {
         isShown &&
         <>
-          <div className='container border-1 my-5 bg-secondary rounded p-4 '>
+          <div id="cart" className='w-25 mx-auto my-5 rounded p-4 '>
             <Cart />
           </div>
-          <div className='container'><hr /></div>
         </>
       }
 
-      <div className='container border-1 rounded p-4 '>
+      <div className='w-50 mx-auto border-1 rounded p-4 '>
         <h4 className='text-light text-center mb-4'>BUY YOUR FAVORITE PRODUCTS</h4>
         <Shop />
       </div>

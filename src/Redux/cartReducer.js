@@ -1,15 +1,15 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from "./cartTypes"
 
 const initialData = {
-    cartSize: 0,
+    cartSize: 10,
     cartData: [
-        // {
-        //     id: 'p1',
-        //     itemQuantity: 10,
-        //     itemPrice: 60,
-        //     itemBasePrice: 6,
-        //     itemTitle: "Man Perfume",
-        // }
+        {
+            id: 'p1',
+            itemQuantity: 10,
+            itemPrice: 60,
+            itemBasePrice: 6,
+            itemTitle: "Man Perfume",
+        }
     ]
 }
 

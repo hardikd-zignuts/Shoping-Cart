@@ -19,15 +19,15 @@ const ShopItem = ({ id, price, title, description }) => {
         <CardBody>
           <div className="d-flex align-items-center justify-content-between">
             <div>
-              <CardTitle className="mb-4" tag="h5">
+              <CardTitle className="mb-4 fw-bold" tag="h5">
                 {title}
               </CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
                 {description}
               </CardSubtitle>
             </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <Badge id="price-badge" className="p-2 fs-5 rounded ">
+            <div className="d-flex align-items-center justify-content-between me-4">
+              <Badge id="price-badge" className="fs-6 fw-normal">
                 ${price}.00
               </Badge>
             </div>
