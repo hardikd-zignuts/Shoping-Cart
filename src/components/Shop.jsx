@@ -6,17 +6,17 @@ const Shop = () => {
   return (
     <>
       <div>
-        {ProductData.map(({ id, price, description, title }) => {
-          return (
-            <ShopItem
-              key={id}
-              id={id}
-              price={price}
-              description={description}
-              title={title}
-            />
-          );
-        })}
+            {ProductData.map(({ id, price, description, title }) => {
+            return (
+                <ShopItem
+                key={id}
+                id={id}
+                price={price}
+                description={description}
+                title={title}
+                />
+            );
+            })}
       </div>
     </>
   );
