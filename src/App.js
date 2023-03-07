@@ -11,7 +11,7 @@ function App() {
       {
         isShown &&
         <>
-          <div id="cart" className='w-25 mx-auto my-5 rounded p-4 '>
+          <div id="cart" className='w-50 mx-auto my-5 rounded p-4 '>
             <Cart />
           </div>
         </>

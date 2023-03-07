@@ -1,15 +1,15 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from "./cartTypes"
 
 const initialData = {
-    cartSize: 10,
+    cartSize: 0,
     cartData: [
-        {
-            id: 'p1',
-            itemQuantity: 10,
-            itemPrice: 60,
-            itemBasePrice: 6,
-            itemTitle: "Man Perfume",
-        }
+        // {
+        //     id: 'p1',
+        //     itemQuantity: 10,
+        //     itemPrice: 60,
+        //     itemBasePrice: 6,
+        //     itemTitle: "Man Perfume",
+        // }
     ]
 }
 
@@ -58,10 +58,8 @@ const cartReducer = (state = initialData, action) => {
         case REMOVE_FROM_CART:
 
             if (checkItem(action.payLoad, state)) {
-                //decrease property
                 tempArr = decreaseQuantity(state, action.payLoad, 'itemQuantity')
             } else {
-                // tempArr = [action.payLoad, ...state.cartData]
                 tempArr = [...state]
             }
 
@@ -71,7 +69,7 @@ const cartReducer = (state = initialData, action) => {
                 cartData: tempArr
             }
         default:
-            return state
+            return { ...state }
     }
 }
 
