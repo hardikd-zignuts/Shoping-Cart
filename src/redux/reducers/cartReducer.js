@@ -47,7 +47,7 @@ const cartReducer = (state = initialData, action) => {
             if (checkItem(action.payLoad, state)) {
                 tempArr = increaseQuantity(state, action.payLoad, 'itemQuantity')
             } else {
-                tempArr = [action.payLoad, ...state.cartData]
+                tempArr = [...state.cartData, action.payLoad]
             }
             return {
                 ...state,
