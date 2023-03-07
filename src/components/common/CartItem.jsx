@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addToCart, removeFromCart } from "../Redux/cartAction";
+import { addToCart, removeFromCart } from "../../redux/actions/cartAction";
 import {
   Card,
   CardBody,

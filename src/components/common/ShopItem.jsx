@@ -8,7 +8,7 @@ import {
   Button,
   Badge,
 } from "reactstrap";
-import { addToCart } from "../Redux/cartAction";
+import { addToCart } from "../../redux/actions/cartAction";
 
 const ShopItem = ({ id, price, title, description }) => {
   const dispatch = useDispatch();

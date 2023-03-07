@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AppBar from "./components/AppBar";
-import Cart from './components/Cart.jsx'
-import Shop from './components/Shop.jsx'
+import Cart from './components/pages/Cart.jsx'
+import Shop from './components/pages/Shop.jsx'
 
 function App() {
   const [isShown, setIsShow] = useState(false)
